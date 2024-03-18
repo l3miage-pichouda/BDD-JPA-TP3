@@ -2,6 +2,7 @@ package fr.uga.l3miage.tp3.exo1.models;
 
 import lombok.*;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -22,6 +23,6 @@ public class PlaylistEntity {
 
     private Duration totalDuration;
 
-    @OneToMany
+    @OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL)
     private Set<SongEntity> songEntities;
 }

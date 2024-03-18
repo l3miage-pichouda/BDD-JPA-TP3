@@ -24,4 +24,7 @@ public class SongEntity {
 
     @ManyToOne
     private ArtistEntity artistEntity;
+
+    @ManyToOne
+    private PlaylistEntity playlist;
 }
